@@ -16,15 +16,21 @@
     <property name="password" value="${jdbc.password}"/>
 </bean>
 
-    <bean class="org.mybatis.spring.SqlSessionFactoryBean">
+    <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <!--开启日志和驼峰命名-->
-        <property name="configuration">
-            <bean class="org.apache.ibatis.session.Configuration">
-                <property name="logImpl" value="org.apache.ibatis.logging.log4j.Log4jImpl"/>
-                <property name="mapUnderscoreToCamelCase" value="true"/>
-            </bean>
+      <property name="configuration">
+          <bean class="com.baomidou.mybatisplus.core.MybatisConfiguration">
+              <property name="logImpl" value="org.apache.ibatis.logging.log4j.Log4jImpl"/>
+          </bean>
+      </property>
+        <property name="plugins">
+            <array>
+                <bean class="com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor">
+                </bean>
+            </array>
         </property>
+
+
     </bean>
 
 

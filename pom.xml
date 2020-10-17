@@ -13,6 +13,8 @@
         <module>crm-mapper</module>
         <module>crm-service</module>
         <module>crm-web</module>
+        <module>mybatis-plus-gen</module>
+        <module>common-cors</module>
     </modules>
 
 

@@ -9,26 +9,28 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>crm-enetity</artifactId>
-
+    <artifactId>mybatis-plus-gen</artifactId>
 <dependencies>
-    <!--JDK8的日期 需要依赖 JSR310-->
-    <dependency>
-        <groupId>com.fasterxml.jackson.datatype</groupId>
-        <artifactId>jackson-datatype-jsr310</artifactId>
-        <version>2.11.2</version>
-    </dependency>
-    <!--lombok 注解-->
-    <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>1.18.4</version>
-    </dependency>
-
     <dependency>
         <groupId>com.baomidou</groupId>
-        <artifactId>mybatis-plus</artifactId>
+        <artifactId>mybatis-plus-generator</artifactId>
         <version>3.4.0</version>
     </dependency>
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.21</version>
+    </dependency>
+    <dependency>
+        <groupId>org.freemarker</groupId>
+        <artifactId>freemarker</artifactId>
+        <version>2.3.28</version>
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>1.7.25</version>
+    </dependency>
 </dependencies>
+
 </project>
