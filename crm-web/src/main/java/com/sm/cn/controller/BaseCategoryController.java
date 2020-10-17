@@ -61,8 +61,8 @@ public class BaseCategoryController {
         return  AjaxResult.success(byId);
     }
 
-    @DeleteMapping
-    public  AjaxResult del(Serializable id){
+    @DeleteMapping("{id}")
+    public  AjaxResult del(@PathVariable("id") Serializable id){
         iBaseCategoryService.delete(id);
         return AjaxResult.success();
     }
