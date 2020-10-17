@@ -58,8 +58,8 @@ public  AjaxResult fingById(@PathVariable("id") Serializable a){
     return  AjaxResult.success(byId);
 }
 
-@DeleteMapping
-    public  AjaxResult del(Serializable id){
+@DeleteMapping("{id}")
+    public  AjaxResult del( @PathVariable("id") Serializable id){
     iBaseGoodService.delete(id);
     return AjaxResult.success();
 }

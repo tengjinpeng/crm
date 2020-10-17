@@ -57,8 +57,8 @@ public class BaseSupplierController {
         return  AjaxResult.success(iBaseSupplierService.findById(a));
     }
 
-    @DeleteMapping
-    public  AjaxResult del(Serializable id){
+    @DeleteMapping("{id}")
+    public  AjaxResult del(@PathVariable("id") Serializable id){
         iBaseSupplierService.delete(id);
         return AjaxResult.success();
     }

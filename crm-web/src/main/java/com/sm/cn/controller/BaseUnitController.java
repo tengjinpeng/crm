@@ -57,8 +57,8 @@ public class BaseUnitController {
         return  AjaxResult.success(  iBaseUnitService.findById(a));
     }
 
-    @DeleteMapping
-    public  AjaxResult del(Serializable id){
+    @DeleteMapping("{id}")
+    public  AjaxResult del(@PathVariable("id") Serializable id){
         iBaseUnitService.delete(id);
         return AjaxResult.success();
     }

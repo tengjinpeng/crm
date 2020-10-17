@@ -58,8 +58,8 @@ public class BaseCustomerController {
         return  AjaxResult.success(iBaseCustomerService.findById(a));
     }
 
-    @DeleteMapping
-    public  AjaxResult del(Serializable id){
+    @DeleteMapping("{id}")
+    public  AjaxResult del(@PathVariable("id") Serializable id){
        iBaseCustomerService.delete(id);
         return AjaxResult.success();
     }
