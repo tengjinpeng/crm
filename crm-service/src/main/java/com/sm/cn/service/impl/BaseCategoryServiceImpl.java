@@ -40,7 +40,19 @@ BaseCategoryMapper baseCategoryMapper;
 
     @Override
     public IPage<BaseCategory> pageList(IPage<BaseCategory> iPage) {
-        return  baseCategoryMapper.selectPage(iPage,null);
+        IPage<BaseCategory> page = baseCategoryMapper.selectPage(iPage, null);
+//        查看是否有父类，如果有则查询父类名
+        page.getRecords().forEach(item->{
+            Integer pId = item.getPId();
+            if(pId.equals(0)){
+                item.setPName("一级分类");
+            }else {
+                BaseCategory byId = this.findById(pId);
+                item.setPName(byId.getName());
+            }
+        });
+
+        return page;
     }
 
     @Override
