@@ -3,6 +3,7 @@ package com.sm.cn.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.sm.cn.entity.BaseCategory;
 import com.sm.cn.entity.BaseGood;
 import com.sm.cn.http.AjaxResult;
 import com.sm.cn.http.PageResult;
@@ -36,10 +37,12 @@ public class BaseGoodController {
 }
 
 @GetMapping("page")
-    public  AjaxResult pageList(@RequestParam(value = "currentPage",defaultValue= "1") int currentPage,@RequestParam(value = "pageSize" ,defaultValue ="2") int pageSize){
+    public  AjaxResult pageList(@RequestParam(value = "currentPage",defaultValue= "1") int currentPage,
+                                @RequestParam(value = "pageSize" ,defaultValue ="2") int pageSize){
+//    封装成iPage对象
     IPage<BaseGood> page=new Page<>(currentPage,pageSize);
-    IPage<BaseGood> baseGoodIPage = iBaseGoodService.pageList(page);
-    return AjaxResult.success(PageResult.instance(baseGoodIPage.getRecords(),baseGoodIPage.getTotal()));
+    PageResult pageResult = iBaseGoodService.pageList(page);
+    return AjaxResult.success(pageResult);
 }
 
 @PostMapping
@@ -63,5 +66,6 @@ public  AjaxResult fingById(@PathVariable("id") Serializable a){
     iBaseGoodService.delete(id);
     return AjaxResult.success();
 }
+
 
 }

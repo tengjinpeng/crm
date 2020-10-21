@@ -2,7 +2,9 @@ package com.sm.cn.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.sm.cn.entity.BaseCategory;
 import com.sm.cn.entity.BaseGood;
+import com.sm.cn.http.PageResult;
 
 import java.io.Serializable;
 import java.util.List;
@@ -25,7 +27,7 @@ public interface IBaseGoodService  {
      * 分页查询
      *
      * */
-    IPage<BaseGood> pageList(IPage<BaseGood> iPage);
+    PageResult pageList(IPage<BaseGood> iPage);
 
     /**
      * 通过id查询
@@ -35,4 +37,6 @@ BaseGood findById(Serializable id);
 void add(BaseGood baseGood);
 void update(BaseGood baseGood);
 void delete(Serializable id);
+
+
 }

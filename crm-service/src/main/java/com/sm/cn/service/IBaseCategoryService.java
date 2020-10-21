@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.sm.cn.entity.BaseCategory;
 import com.sm.cn.entity.BaseCustomer;
 import com.sm.cn.entity.BaseUnit;
+import com.sm.cn.http.PageResult;
 
 import java.io.Serializable;
 import java.util.List;
@@ -24,13 +25,8 @@ public interface IBaseCategoryService {
 
     List<BaseCategory> findAll();
 
-    /**
-     *
-     * @param currentPage
-     * @param pageSize
-     * @return
-     */
-    IPage<BaseCategory> pageList(IPage<BaseCategory> iPage);
+
+    PageResult pageList(IPage<BaseCategory> iPage);
 
     /**
      * 通过id查询
@@ -47,4 +43,5 @@ public interface IBaseCategoryService {
     void update(BaseCategory baseCategory);
     void delete(Serializable id);
 
+    List<BaseCategory> getCategoryTree();
 }

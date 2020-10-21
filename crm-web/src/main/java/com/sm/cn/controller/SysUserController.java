@@ -6,12 +6,11 @@ package com.sm.cn.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sm.cn.entity.BaseCategory;
-import com.sm.cn.entity.BaseCustomer;
-import com.sm.cn.entity.BaseGood;
+import com.sm.cn.entity.SysUser;
 import com.sm.cn.http.AjaxResult;
 import com.sm.cn.http.PageResult;
-import com.sm.cn.service.IBaseCategoryService;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import com.sm.cn.service.ISysUserService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -28,54 +27,46 @@ import java.util.List;
  * @since 2020-10-17
  */
 @RestController
-@RequestMapping("category")
-public class BaseCategoryController {
+@RequestMapping("user")
+public class SysUserController {
 @Resource
-    IBaseCategoryService iBaseCategoryService;
+ISysUserService iSysUserService;
     @GetMapping
     public AjaxResult findAll(){
-        List<BaseCategory> all = iBaseCategoryService.findAll();
+        List<SysUser> all = iSysUserService.findAll();
         return  AjaxResult.success(all);
     }
 
     @GetMapping("page")
     public  AjaxResult pageList(@RequestParam(defaultValue = "1")int  currentPage,
                                 @RequestParam(defaultValue = "2") int  pageSize){
-        IPage<BaseCategory> page=new Page<>(currentPage,pageSize);
-        PageResult pageResult = iBaseCategoryService.pageList(page);
+        IPage<SysUser> page=new Page<>(currentPage,pageSize);
+        PageResult pageResult = iSysUserService.pageList(page);
         return AjaxResult.success(pageResult);
     }
 
     @PostMapping
-    public  AjaxResult add(@RequestBody BaseCategory baseCategory){
-        iBaseCategoryService.add(baseCategory);
+    public  AjaxResult add(@RequestBody SysUser sysUser){
+        iSysUserService.add(sysUser);
         return AjaxResult.success();
     }
     @PutMapping
-    public  AjaxResult update(@RequestBody BaseCategory baseCategory){
-        iBaseCategoryService.update(baseCategory);
+    public  AjaxResult update(@RequestBody SysUser sysUser){
+        System.out.println(sysUser.toString());
+        iSysUserService.update(sysUser);
         return AjaxResult.success();
     }
     @GetMapping("{id}")
     public  AjaxResult fingById(@PathVariable("id") Serializable a){
-        BaseCategory byId = iBaseCategoryService.findById(a);
+        SysUser byId = iSysUserService.findById(a);
         return  AjaxResult.success(byId);
     }
 
     @DeleteMapping("{id}")
     public  AjaxResult del(@PathVariable("id") Serializable id){
-        iBaseCategoryService.delete(id);
+        iSysUserService.delete(id);
         return AjaxResult.success();
     }
 
-    /**
-     * 查询分类给商品模块用
-     * @return
-     */
 
-    @GetMapping("categoryTree")
-    public AjaxResult getCategoryTree(){
-        List<BaseCategory> treeList=iBaseCategoryService.getCategoryTree();
-        return AjaxResult.success(treeList);
-    }
 }

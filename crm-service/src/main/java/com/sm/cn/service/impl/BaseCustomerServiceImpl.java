@@ -3,6 +3,7 @@ package com.sm.cn.service.impl;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sm.cn.entity.BaseCustomer;
+import com.sm.cn.http.PageResult;
 import com.sm.cn.mapper.BaseCategoryMapper;
 import com.sm.cn.mapper.BaseCustomerMapper;
 import com.sm.cn.service.IBaseCustomerService;
@@ -32,8 +33,11 @@ public class BaseCustomerServiceImpl implements IBaseCustomerService {
     }
 
     @Override
-    public IPage<BaseCustomer> pageList(IPage<BaseCustomer> iPage) {
-        return baseCustomerMapper.selectPage(iPage,null);
+    public PageResult pageList(IPage<BaseCustomer> iPage) {
+        IPage<BaseCustomer> baseCustomerIPage = baseCustomerMapper.selectPage(iPage, null);
+        List<BaseCustomer> records = baseCustomerIPage.getRecords();
+        long total = baseCustomerIPage.getTotal();
+        return PageResult.instance(records,total);
     }
 
     @Override

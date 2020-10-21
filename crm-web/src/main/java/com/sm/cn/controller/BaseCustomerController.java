@@ -38,8 +38,8 @@ public class BaseCustomerController {
     @GetMapping("page")
     public  AjaxResult pageList(@RequestParam(defaultValue = "1") int currentPage,@RequestParam(defaultValue = "2") int pageSize){
         IPage<BaseCustomer> page=new Page<>(currentPage,pageSize);
-        IPage<BaseCustomer> baseGoodIPage = iBaseCustomerService.pageList(page);
-        return AjaxResult.success(PageResult.instance(baseGoodIPage.getRecords(),baseGoodIPage.getTotal()));
+        PageResult pageResult = iBaseCustomerService.pageList(page);
+        return AjaxResult.success(pageResult);
     }
 
     @PostMapping

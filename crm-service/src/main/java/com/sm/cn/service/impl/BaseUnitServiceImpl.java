@@ -3,6 +3,7 @@ package com.sm.cn.service.impl;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sm.cn.entity.BaseUnit;
+import com.sm.cn.http.PageResult;
 import com.sm.cn.mapper.BaseUnitMapper;
 import com.sm.cn.service.IBaseUnitService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,9 +33,12 @@ BaseUnitMapper baseUnitMapper;
     }
 
     @Override
-    public IPage<BaseUnit> pageList(IPage<BaseUnit> iPage) {
+    public PageResult pageList(IPage<BaseUnit> iPage) {
 
-        return baseUnitMapper.selectPage(iPage,null);
+        IPage<BaseUnit> baseUnitIPage = baseUnitMapper.selectPage(iPage, null);
+        List<BaseUnit> records = baseUnitIPage.getRecords();
+        long total = baseUnitIPage.getTotal();
+        return PageResult.instance(records,total);
     }
 
 

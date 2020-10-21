@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sm.cn.entity.BaseGood;
+import com.sm.cn.http.PageResult;
 import com.sm.cn.mapper.BaseGoodMapper;
 import com.sm.cn.service.IBaseGoodService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,10 +35,12 @@ public class BaseGoodServiceImpl  implements IBaseGoodService {
     }
 
     @Override
-    public IPage<BaseGood> pageList(IPage<BaseGood> iPage) {
-        IPage<BaseGood> baseGoodIPage = baseGoodMapper.selectPage(iPage, null);
+    public PageResult pageList(IPage<BaseGood> iPage) {
+        IPage<BaseGood> baseGoodIPage1 = baseGoodMapper.selectPage(iPage, null);
+        List<BaseGood> records = baseGoodIPage1.getRecords();
+        long total = baseGoodIPage1.getTotal();
 
-        return baseGoodIPage;
+        return PageResult.instance(records,total);
     }
 
     @Override

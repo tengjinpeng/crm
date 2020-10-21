@@ -3,6 +3,7 @@ package com.sm.cn.service.impl;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sm.cn.entity.BaseSupplier;
+import com.sm.cn.http.PageResult;
 import com.sm.cn.mapper.BaseSupplierMapper;
 import com.sm.cn.service.IBaseSupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,8 +32,12 @@ BaseSupplierMapper baseSupplierMapper;
     }
 
     @Override
-    public IPage<BaseSupplier> pageList(IPage<BaseSupplier> iPage) {
-        return baseSupplierMapper.selectPage(iPage,null);
+    public PageResult pageList(IPage<BaseSupplier> iPage) {
+        IPage<BaseSupplier> baseSupplierIPage = baseSupplierMapper.selectPage(iPage, null);
+        List<BaseSupplier> records = baseSupplierIPage.getRecords();
+        long total = baseSupplierIPage.getTotal();
+
+        return PageResult.instance(records,total);
     }
 
     @Override

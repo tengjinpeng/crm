@@ -37,8 +37,9 @@ public class BaseSupplierController {
     @GetMapping("page")
     public  AjaxResult pageList(@RequestParam(defaultValue = "1") int currentPage,@RequestParam(defaultValue = "2") int pageSize){
         IPage<BaseSupplier> page=new Page<>(currentPage,pageSize);
-        IPage<BaseSupplier> baseGoodIPage = iBaseSupplierService.pageList(page);
-        return AjaxResult.success(PageResult.instance(baseGoodIPage.getRecords(),baseGoodIPage.getTotal()));
+        PageResult pageResult = iBaseSupplierService.pageList(page);
+
+        return AjaxResult.success(pageResult);
     }
 
     @PostMapping

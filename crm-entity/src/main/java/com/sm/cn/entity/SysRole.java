@@ -6,40 +6,41 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * <p>
- * 
+ * 角色信息表
  * </p>
  *
  * @author tjp
- * @since 2020-10-17
+ * @since 2020-10-20
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class BaseCategory implements Serializable {
+public class SysRole implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 类型id
+     * 角色ID
      */
-    @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    @TableId(value = "role_id", type = IdType.AUTO)
+    private Long roleId;
 
     /**
-     * 类型名称
+     * 角色名称
      */
-    private String name;
+    private String roleName;
 
     /**
-     * 父级id
+     * 显示顺序
      */
-    private Integer pId;
-//    父类名
-private  transient String pName;
-//孩子字段
-private transient List<BaseCategory> children;
+    private Integer roleSort;
+
+    /**
+     * 备注
+     */
+    private String remark;
+
 
 }

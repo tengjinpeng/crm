@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.sm.cn.entity.BaseGood;
 import com.sm.cn.entity.BaseSupplier;
 import com.sm.cn.entity.BaseUnit;
+import com.sm.cn.http.PageResult;
 
 import java.io.Serializable;
 import java.util.List;
@@ -27,7 +28,7 @@ public interface IBaseSupplierService  {
      * 分页查询
      *
      * */
-    IPage<BaseSupplier> pageList(IPage<BaseSupplier> iPage);
+    PageResult pageList(IPage<BaseSupplier> iPage);
 
     /**
      * 通过id查询

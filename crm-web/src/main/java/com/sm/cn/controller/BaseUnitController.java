@@ -37,8 +37,8 @@ public class BaseUnitController {
     @GetMapping("page")
     public  AjaxResult pageList(@RequestParam(defaultValue = "1") int currentPage,@RequestParam(defaultValue = "2") int pageSize){
         IPage<BaseUnit> page=new Page<>(currentPage,pageSize);
-        IPage<BaseUnit> baseGoodIPage = iBaseUnitService.pageList(page);
-        return AjaxResult.success(PageResult.instance(baseGoodIPage.getRecords(),baseGoodIPage.getTotal()));
+        PageResult pageResult = iBaseUnitService.pageList(page);
+        return AjaxResult.success(pageResult);
     }
 
     @PostMapping
