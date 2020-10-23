@@ -6,6 +6,8 @@ package com.sm.cn.controller;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
+import com.sm.cn.async.AsyncManager;
+import com.sm.cn.async.AsynvFactory;
 import com.sm.cn.email.EmailService;
 import com.sm.cn.entity.SysUser;
 import com.sm.cn.groupvalidator.AddGroup;
@@ -17,6 +19,7 @@ import com.sm.cn.service.ISysUserService;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -67,6 +70,7 @@ private FreeMarkerConfigurer freeMarkerConfigurer;
         return AjaxResult.success(pageResult);
     }
 
+
     @PostMapping
     public  AjaxResult add(@Validated(AddGroup.class) @RequestBody SysUser sysUser ) throws Exception {
       sysUser.setPassword(bCryptPasswordEncoder.encode("123456"));
@@ -78,6 +82,7 @@ private FreeMarkerConfigurer freeMarkerConfigurer;
         map.put("password", "123456");
         StringWriter stringWriter=new StringWriter();
         template.process(map,stringWriter);
+        AsyncManager.getInstance().executeTask(AsynvFactory.executeEmail(sysUser.getEmail(),stringWriter.toString()));
          emailService.sendMail(sysUser.getEmail(),stringWriter.toString());
 
         return AjaxResult.success();
