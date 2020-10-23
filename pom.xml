@@ -15,11 +15,8 @@
         <module>crm-web</module>
         <module>mybatis-plus-gen</module>
         <module>common-cors</module>
-        <module>common-upload</module>
-        <module>common-upload</module>
         <module>crm-upload</module>
         <module>common-valicator</module>
-        <module>commons-email</module>
     </modules>
 
 

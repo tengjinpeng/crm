@@ -9,16 +9,8 @@
     <context:component-scan base-package="com.sm.cn"/>
 <!--mvc注解开启-->
     <mvc:annotation-driven/>
-    <!--视图解析器，跳转资源-->
-    <mvc:default-servlet-handler/>
 
-<!--动态加密-->
-    <bean  id="bCryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
-<!--邮件模板-->
-    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer" id="freeMarkerConfigurer">
+<bean id="bCryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
 
-        <property name="templateLoaderPath" value="/WEB-INF/ftl/"/>
-        <property name="defaultEncoding" value="utf-8"/>
-    </bean>
 
 </beans>
