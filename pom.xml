@@ -17,6 +17,7 @@
         <module>common-cors</module>
         <module>crm-upload</module>
         <module>common-valicator</module>
+        <module>common-email</module>
     </modules>
 
 
