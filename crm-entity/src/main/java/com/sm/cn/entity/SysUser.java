@@ -94,5 +94,6 @@ public class SysUser implements Serializable {
      */
     private String remark;
 
-
+//    用户权限id 数组
+private  transient  String roleIds;
 }

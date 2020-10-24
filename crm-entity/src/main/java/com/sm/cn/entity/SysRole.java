@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * <p>
@@ -42,5 +43,5 @@ public class SysRole implements Serializable {
      */
     private String remark;
 
-
+private  transient List<Long> menuIds;
 }

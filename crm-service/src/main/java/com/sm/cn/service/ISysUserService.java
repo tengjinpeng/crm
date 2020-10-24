@@ -35,5 +35,5 @@ public interface ISysUserService {
     void update(SysUser sysUser);
     void delete(Serializable id);
 
-//    List<SysUser> getCategoryTree();
+
 }

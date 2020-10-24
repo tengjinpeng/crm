@@ -19,7 +19,6 @@
         <module>common-valicator</module>
         <module>common-email</module>
         <module>common-getBean</module>
-        <module>common-threadpool</module>
         <module>common-asyncpool</module>
     </modules>
 

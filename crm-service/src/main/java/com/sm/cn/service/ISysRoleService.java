@@ -21,7 +21,7 @@ public interface ISysRoleService {
      * @param iPage
      * @return 返回 total data
      */
-    PageResult pageList(IPage<SysUser> iPage);
+    PageResult pageList(IPage<SysRole> iPage);
 
     /**
      * 通过id查询

@@ -1,6 +1,7 @@
 package com.sm.cn.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.sm.cn.entity.SysRole;
 import com.sm.cn.entity.SysUser;
 import com.sm.cn.entity.SysUserRole;
 import com.sm.cn.http.PageResult;
@@ -31,5 +32,12 @@ public interface ISysUserRoleService {
     void add(SysUserRole sysUserRole);
     void update(SysUserRole sysUserRole);
     void delete(Serializable id);
+
+
+    List<SysRole> findRoleBuyUserId(Serializable userId);
+
+    void deleteByUserIdAndRoleId(Serializable userId,Serializable roleId);
+
+    void deleteAllRoleByUserId(Serializable userId);
 
 }

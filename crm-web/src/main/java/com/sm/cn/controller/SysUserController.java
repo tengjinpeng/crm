@@ -9,12 +9,14 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sm.cn.async.AsyncManager;
 import com.sm.cn.async.AsynvFactory;
 import com.sm.cn.email.EmailService;
+import com.sm.cn.entity.SysRole;
 import com.sm.cn.entity.SysUser;
 import com.sm.cn.groupvalidator.AddGroup;
 import com.sm.cn.groupvalidator.UpdateGroup;
 import com.sm.cn.http.AjaxResult;
 import com.sm.cn.http.PageResult;
 
+import com.sm.cn.service.ISysUserRoleService;
 import com.sm.cn.service.ISysUserService;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -55,6 +57,8 @@ private BCryptPasswordEncoder bCryptPasswordEncoder;
 private EmailService emailService;
 @Autowired
 private FreeMarkerConfigurer freeMarkerConfigurer;
+@Autowired
+private ISysUserRoleService iSysUserRoleService;
 
     @GetMapping
     public AjaxResult findAll(){
@@ -73,23 +77,24 @@ private FreeMarkerConfigurer freeMarkerConfigurer;
 
     @PostMapping
     public  AjaxResult add(@Validated(AddGroup.class) @RequestBody SysUser sysUser ) throws Exception {
-      sysUser.setPassword(bCryptPasswordEncoder.encode("123456"));
-         iSysUserService.add(sysUser);
-        Configuration configuration =freeMarkerConfigurer.getConfiguration();
-        Template template = configuration.getTemplate("user.ftl", "utf-8");
-        Map<String,String> map=new HashMap<>();
-        map.put("userName",sysUser.getUserName());
-        map.put("password", "123456");
-        StringWriter stringWriter=new StringWriter();
-        template.process(map,stringWriter);
-        AsyncManager.getInstance().executeTask(AsynvFactory.executeEmail(sysUser.getEmail(),stringWriter.toString()));
-         emailService.sendMail(sysUser.getEmail(),stringWriter.toString());
+        System.out.println("后台数据 ："+sysUser.toString());
 
+        sysUser.setPassword(bCryptPasswordEncoder.encode("123456"));
+         iSysUserService.add(sysUser);
+//        Configuration configuration =freeMarkerConfigurer.getConfiguration();
+//        Template template = configuration.getTemplate("user.ftl", "utf-8");
+//        Map<String,String> map=new HashMap<>();
+//        map.put("userName",sysUser.getUserName());
+//        map.put("password", "123456");
+//        StringWriter stringWriter=new StringWriter();
+//        template.process(map,stringWriter);
+////        异步任务调度发送邮件
+//        AsyncManager.getInstance().executeTask(AsynvFactory.executeEmail(sysUser.getEmail(),stringWriter.toString()));
         return AjaxResult.success();
     }
     @PutMapping
     public  AjaxResult update(@Validated(UpdateGroup.class)@RequestBody SysUser sysUser){
-        System.out.println(sysUser.toString());
+        System.out.println("修改后 ： "+sysUser.toString());
         iSysUserService.update(sysUser);
         return AjaxResult.success();
     }
@@ -101,8 +106,28 @@ private FreeMarkerConfigurer freeMarkerConfigurer;
 
     @DeleteMapping("{id}")
     public  AjaxResult del(@PathVariable("id") Serializable id){
-        iSysUserService.delete(id);
+        SysUser byId = iSysUserService.findById(id);
+        byId.setDelFlag(2);
+        iSysUserService.update(byId);
         return AjaxResult.success();
+    }
+
+    /**
+     * 根据用户id查用户的所有角色
+     * @param userId
+     * @return
+     */
+    @GetMapping({"{userId}/roles"})
+    public  AjaxResult getUserRoleByUserId(@PathVariable Serializable userId){
+        List<SysRole> roleBuyUserId = iSysUserRoleService.findRoleBuyUserId(userId);
+
+        return  AjaxResult.success(roleBuyUserId);
+    }
+@DeleteMapping("{userId}/role/{roleId}")
+    public  AjaxResult getRoleByUserId(@PathVariable Serializable userId,@PathVariable Serializable roleId){
+
+              iSysUserRoleService.deleteByUserIdAndRoleId(userId,roleId);
+    return AjaxResult.success();
     }
 
 

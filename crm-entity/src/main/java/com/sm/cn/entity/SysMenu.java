@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * <p>
@@ -76,6 +77,8 @@ public class SysMenu implements Serializable {
      * 请求方式
      */
     private String method;
+//    孩子集
+    private  transient List<SysMenu> children;
 
 
 }
