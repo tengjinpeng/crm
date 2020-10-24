@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+
+    <context:component-scan base-package="com.sm.cn.service"/>
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+<!--开启事务注解-->
+<tx:annotation-driven/>
+
+    <!--AOP事务处理-->
+<!--<tx:advice  id="MyAdvice" transaction-manager="transactionManager">-->
+    <!--<tx:attributes>-->
+        <!--<tx:method name="get*"/>-->
+        <!--<tx:method name="select*"/>-->
+        <!--<tx:method name="remove*"/>-->
+        <!--<tx:method name="update*"/>-->
+        <!--<tx:method name="delete*"/>-->
+    <!--</tx:attributes>-->
+<!--</tx:advice>-->
+
+    <!--&lt;!&ndash;com.baomidou.mybatisplus.extension.service.impl类下所有方法和参数  添加事务&ndash;&gt;-->
+<!--<aop:config>-->
+    <!--<aop:advisor advice-ref="MyAdvice" pointcut="execution(* com.baomidou.mybatisplus.extension.service.impl.*.*(..))"/>-->
+<!--</aop:config>-->
+
+    <!--&lt;!&ndash;跨域设置&ndash;&gt;-->
+<!--<bean id="MyCors"  class="org.springframework.web.filter.CorsFilter">-->
+<!--<constructor-arg name="configSource">-->
+    <!--<bean   class="org.springframework.web.cors.UrlBasedCorsConfigurationSource">-->
+        <!--<property name="corsConfigurations">-->
+            <!--<map>-->
+                <!--<entry key="/**">-->
+                    <!--<bean class="org.springframework.web.cors.CorsConfiguration">-->
+                        <!--<property name="allowCredentials" value="true"/>-->
+                        <!--<property name="allowedHeaders" value="*"/>-->
+                        <!--<property name="allowedOrigins" value="*"/>-->
+                        <!--<property name="allowedMethods">-->
+                            <!--<list>-->
+                                <!--<value>GET</value>-->
+                                <!--<value>PUT</value>-->
+                                <!--<value>POST</value>-->
+                                <!--<value>DELETE</value>-->
+                                <!--<value>OPTIONS</value>-->
+                                <!--<value>HEAD</value>-->
+                            <!--</list>-->
+                        <!--</property>-->
+
+                    <!--</bean>-->
+                <!--</entry>-->
+            <!--</map>-->
+        <!--</property>-->
+    <!--</bean>-->
+<!--</constructor-arg>-->
+<!--</bean>-->
+
+</beans>

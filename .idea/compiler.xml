@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common-asyncpool" />
+        <module name="common-email" />
+        <module name="common-getBean" />
+        <module name="common-threadpool" />
+        <module name="common-valicator" />
+        <module name="commoncors" />
+        <module name="crm-entity" />
+        <module name="crm-mapper" />
+        <module name="crm-service" />
+        <module name="crm-upload" />
+        <module name="crm-web" />
+        <module name="mybatisplusgen" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common-threadpool" target="1.8" />
+      <module name="common-upload" target="1.8" />
+      <module name="commons-email" target="1.8" />
+      <module name="commonupload" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
