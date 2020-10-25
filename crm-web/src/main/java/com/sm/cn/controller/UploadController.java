@@ -3,6 +3,7 @@ package com.sm.cn.controller;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
 import com.sm.cn.http.AjaxResult;
+import com.sm.cn.upload.FileUtils;
 import com.sm.cn.upload.UploadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,9 +25,10 @@ public class UploadController {
 private UploadService uploadService;
     @PostMapping("upload")
     public AjaxResult upload(@RequestPart("file") javax.servlet.http.Part avatar) throws IOException {
-        System.out.println(avatar.getSubmittedFileName());
-//        转化成文件流，输入到OSS中
-      return uploadService.uploadService(avatar.getInputStream(),avatar.getSubmittedFileName(),avatar.getSize());
+        String fileName = FileUtils.getFileName(avatar);
+        System.out.println(fileName);
+
+      return uploadService.uploadService(avatar.getInputStream(),fileName,avatar.getSize());
 
 
   }

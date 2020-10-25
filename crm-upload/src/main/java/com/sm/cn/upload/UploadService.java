@@ -65,6 +65,8 @@ private int imgSize;//默认是兆 M
          return  AjaxResult.error(AjaxStatus.FILE_TOLONG);
      }
 //         目录打散 重命名
+
+        //        转化成byte字节数组流，输入到OSSClient中
        ByteArrayInputStream inputStream1=new ByteArrayInputStream(buffer);
         OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
         ossClient.putObject(bucketName, fileName, inputStream1);
