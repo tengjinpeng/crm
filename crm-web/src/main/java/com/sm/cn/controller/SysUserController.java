@@ -53,10 +53,10 @@ public class SysUserController {
 ISysUserService iSysUserService;
 @Autowired
 private BCryptPasswordEncoder bCryptPasswordEncoder;
-@Autowired
-private EmailService emailService;
-@Autowired
-private FreeMarkerConfigurer freeMarkerConfigurer;
+//@Autowired
+//private EmailService emailService;
+//@Autowired
+//private FreeMarkerConfigurer freeMarkerConfigurer;
 @Autowired
 private ISysUserRoleService iSysUserRoleService;
 

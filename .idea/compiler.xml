@@ -10,7 +10,9 @@
         <module name="common-asyncpool" />
         <module name="common-email" />
         <module name="common-getBean" />
+        <module name="common-rediscache" />
         <module name="common-threadpool" />
+        <module name="common-useragent" />
         <module name="common-valicator" />
         <module name="commoncors" />
         <module name="crm-entity" />

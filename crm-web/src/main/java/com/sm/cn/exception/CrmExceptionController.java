@@ -16,7 +16,7 @@ import java.util.Map;
 /**
  * @Auther: tjp
  * @Date: 2020/10/21 22:06
- * @Description:
+ * @Description:       Controller的切面，对异常统一处理hibernator validator 验证异常
  */
 @RestControllerAdvice
 public class CrmExceptionController {

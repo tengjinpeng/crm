@@ -2,24 +2,21 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:mvc="http://www.springframework.org/schema/mvc"
-
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.alibaba.com/schema/stat http://www.alibaba.com/schema/stat.xsd">
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.alibaba.com/schema/stat http://www.alibaba.com/schema/stat.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
     <!--包扫描-->
     <context:component-scan base-package="com.sm.cn"/>
 <!--mvc注解开启-->
     <mvc:annotation-driven/>
 
-<bean id="bCryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
 
-    <!--freeMark-->
+    <!--freeMark邮件模板引擎-->
     <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer" id="freeMarkerConfigurer">
-
         <property name="templateLoaderPath" value="/WEB-INF/ftl/"/>
         <property name="defaultEncoding" value="utf-8"/>
     </bean>
 
-    <!--和new threa 一样-->
+    <!--和new thread 一样-->
    <!--<task:annotation-driven/>-->
 <!--一般执行任务调度会这么做，但只能在容器中调用-->
     <!--&lt;!&ndash;定义线程池调度类&ndash;&gt;-->
@@ -31,4 +28,17 @@
     <!--<bean id="scheduler" class="org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler"/>-->
 <!--<task:annotation-driven executor="threadPoolTaskExecutor" scheduler="scheduler"/>-->
     <!--      xmlns:task="http://www.springframework.org/schema/task"  命名空间-->
+    <!--spring MVC拦截器 每次请求进行拦截 是否携带token-->
+<mvc:interceptors>
+    <mvc:interceptor>
+        <mvc:mapping path="/**"/>
+        <mvc:exclude-mapping path="/login"/>
+    <bean class="com.sm.cn.Interceptor.LoginInterceptor"/>
+    </mvc:interceptor>
+</mvc:interceptors>
+
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate" ></bean>
+
+    <!--web.xml加载顺序: spring的applicationContext 先加载 ,springmvc配置文件后加载,
+     父子容器加载时   spring配置文件不能拿springmvc配置文件中的bean  springmvc配置文件可以拿spring配置文件中的bean-->
 </beans>

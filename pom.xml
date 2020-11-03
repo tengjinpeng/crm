@@ -20,6 +20,8 @@
         <module>common-email</module>
         <module>common-getBean</module>
         <module>common-asyncpool</module>
+        <module>common-useragent</module>
+        <module>common-rediscache</module>
     </modules>
 
 

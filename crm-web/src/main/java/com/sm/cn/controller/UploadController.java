@@ -1,7 +1,5 @@
 package com.sm.cn.controller;
 
-import com.aliyun.oss.OSS;
-import com.aliyun.oss.OSSClientBuilder;
 import com.sm.cn.http.AjaxResult;
 import com.sm.cn.upload.FileUtils;
 import com.sm.cn.upload.UploadService;
@@ -9,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
+import sun.rmi.runtime.Log;
 
-import javax.annotation.Resource;
 import java.io.IOException;
-import java.io.InputStream;
+import java.util.logging.Logger;
 
 /**
  * @Auther: tjp
@@ -26,7 +24,7 @@ private UploadService uploadService;
     @PostMapping("upload")
     public AjaxResult upload(@RequestPart("file") javax.servlet.http.Part avatar) throws IOException {
         String fileName = FileUtils.getFileName(avatar);
-        System.out.println(fileName);
+
 
       return uploadService.uploadService(avatar.getInputStream(),fileName,avatar.getSize());
 

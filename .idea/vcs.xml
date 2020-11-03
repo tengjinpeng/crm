@@ -5,5 +5,7 @@
     <mapping directory="$PROJECT_DIR$/common-asyncpool" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/common-email" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/common-getBean" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/common-rediscache" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/common-useragent" vcs="svn" />
   </component>
 </project>

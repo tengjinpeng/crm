@@ -7,13 +7,18 @@
 
 
 
-    <context:component-scan base-package="com.sm.cn.service"/>
+    <context:component-scan base-package="com.sm.cn"/>
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
+
+    <bean id="tokenService" class="com.sm.cn.mytoken.TokenService" scope="prototype"/>
 <!--开启事务注解-->
 <tx:annotation-driven/>
+
+    <!--动态加盐加密-->
+    <bean id="bCryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
 
     <!--AOP事务处理-->
 <!--<tx:advice  id="MyAdvice" transaction-manager="transactionManager">-->

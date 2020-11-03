@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="87b53f8a-5d48-4af2-8c76-9fd1f54b3f77" name="Default" comment="">
+    <list default="true" readonly="true" id="87b53f8a-5d48-4af2-8c76-9fd1f54b3f77" name="Default" comment="目录打散，优化异步任务调度">
       <change afterPath="$PROJECT_DIR$/common-asyncpool" afterDir="true" />
       <change afterPath="$PROJECT_DIR$/common-asyncpool/src" afterDir="true" />
       <change afterPath="$PROJECT_DIR$/common-asyncpool/src/main" afterDir="true" />
@@ -16,17 +16,56 @@
       <change afterPath="$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn" afterDir="true" />
       <change afterPath="$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async" afterDir="true" />
       <change afterPath="$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsyncManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-upload/src/main/java/com/sm/cn/upload/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/LoginUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysLoginLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysOperLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-mapper/src/main/java/com/sm/cn/mapper/SysLoginLogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-mapper/src/main/java/com/sm/cn/mapper/SysOperLogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/mytoken/TokenService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysLoginLogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysLoginLogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/Interceptor/LoginInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/LoginLogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/JwtAuthorizationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-upload/src/main/java/com/sm/cn/upload/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-upload/src/main/java/com/sm/cn/upload/UploadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-upload/src/main/resources/upload.properties" beforeDir="false" afterPath="$PROJECT_DIR$/crm-upload/src/main/resources/upload.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-upload/target/classes/com/sm/cn/upload/UploadService.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-upload/target/classes/com/sm/cn/upload/UploadService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-upload/target/classes/upload.properties" beforeDir="false" afterPath="$PROJECT_DIR$/crm-upload/target/classes/upload.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-entity/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-entity/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/http/AjaxStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/http/AjaxStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-entity/target/classes/com/sm/cn/http/AjaxStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-entity/target/classes/com/sm/cn/http/AjaxStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-mapper/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/crm-mapper/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-mapper/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/crm-mapper/target/classes/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-service/src/main/resources/application-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-service/src/main/resources/application-service.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-service/target/classes/application-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-service/target/classes/application-service.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-service/target/classes/com/sm/cn/service/ISysUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-service/target/classes/com/sm/cn/service/ISysUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-service/target/classes/com/sm/cn/service/impl/SysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-service/target/classes/com/sm/cn/service/impl/SysUserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/SysUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/CrmExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/CrmExceptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/resources/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/classes/com/sm/cn/controller/SysUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/classes/com/sm/cn/controller/SysUserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/target/classes/com/sm/cn/controller/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/classes/com/sm/cn/controller/UploadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/classes/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/classes/com/sm/cn/controller/SysUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/classes/com/sm/cn/controller/SysUserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/classes/com/sm/cn/controller/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/classes/com/sm/cn/controller/UploadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/classes/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-asyncpool-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-asyncpool-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-cors-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-cors-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-email-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-email-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-getBean-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-getBean-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-valicator-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-valicator-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-enetity-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-enetity-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-mapper-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-mapper-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-service-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-upload-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-upload-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis-plus-gen/src/main/java/CodeGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-plus-gen/src/main/java/CodeGen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,6 +85,8 @@
     <ignored path="$PROJECT_DIR$/common-getbean/target/" />
     <ignored path="$PROJECT_DIR$/common-email/target/" />
     <ignored path="$PROJECT_DIR$/common-asyncpool/target/" />
+    <ignored path="$PROJECT_DIR$/common-useragent/target/" />
+    <ignored path="$PROJECT_DIR$/common-rediscache/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,145 +94,119 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/crm_root$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1602929072650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.74270755">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="SpringUtils.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/common-getBean/src/main/java/com/sm/cn/spring/SpringUtils.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/crm-upload/pom.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="448">
-                  <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UploadController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/UploadController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="271">
-                  <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="application-upload.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/crm-upload/src/main/resources/application-upload.xml">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file leaf-file-name="upload.properties" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/crm-upload/src/main/resources/upload.properties">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="27">
-                  <caret line="1" selection-start-line="1" selection-end-line="2" selection-end-column="46" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UploadService.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/crm-upload/src/main/java/com/sm/cn/upload/UploadService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1323">
-                  <caret line="73" column="42" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
-                  <folding>
-                    <element signature="e#879#892#1" expanded="true" />
-                    <element signature="e#926#942#1" expanded="true" />
-                    <element signature="e#983#1003#1" expanded="true" />
-                    <element signature="e#1047#1062#1" expanded="true" />
-                    <element signature="e#1102#1114#1" expanded="true" />
-                    <element signature="e#1149#1157#1" expanded="true" />
-                    <element signature="e#1186#1198#1" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FileUtils.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/crm-upload/src/main/java/com/sm/cn/upload/FileUtils.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="486">
-                  <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CrmExceptionController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/CrmExceptionController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="729">
-                  <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AsyncManager.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsyncManager.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="411">
-                  <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#730#731#0" expanded="true" />
-                    <element signature="e#793#794#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AsynvFactory.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsynvFactory.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="20" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="SysUserController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/SysUserController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="91" column="39" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="39" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CodeGen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mybatis-plus-gen/src/main/java/CodeGen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="837">
+              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="email.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common-email/src/main/resources/email.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crm-upload/src/main/java/com/sm/cn/upload/FileUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crm-upload/src/main/java/com/sm/cn/upload/UploadService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="springmvc.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crm-web/src/main/resources/springmvc.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpringUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common-getBean/src/main/java/com/sm/cn/spring/SpringUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="17" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AsynvFactory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsynvFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="35" column="91" selection-start-line="35" selection-start-column="91" selection-end-line="35" selection-end-column="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AsyncManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsyncManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+              <folding>
+                <element signature="e#757#758#0" expanded="true" />
+                <element signature="e#820#821#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application-upload.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crm-upload/src/main/resources/application-upload.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="upload.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crm-upload/src/main/resources/upload.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="HTML File" />
         <option value="AnnotationType" />
         <option value="Interface" />
-        <option value="JUnit4 Test Class" />
-        <option value="HTML File" />
+        <option value="XSLT Stylesheet" />
         <option value="spring-beans.schema" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -215,59 +230,62 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/crm-upload/src/test/java/com/sm/cn/controller/UploadService.java" />
-        <option value="$PROJECT_DIR$/commons-email/pom.xml" />
-        <option value="$PROJECT_DIR$/commons-email/src/main/java/com/sm/cn/email/EmailTest.java" />
-        <option value="$PROJECT_DIR$/commons-email/src/test/java/com/sm/cn/email/EmailServiceTest.java" />
-        <option value="$PROJECT_DIR$/commons-email/src/main/resources/application-email.xml" />
-        <option value="$PROJECT_DIR$/commons-email/src/main/resources/email.properties" />
-        <option value="$PROJECT_DIR$/commons-email/src/main/resources/application-commons.xml" />
-        <option value="$PROJECT_DIR$/commons-email/src/main/java/com/sm/cn/email/EmailService.java" />
-        <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/DemoTest/PasswordTest.java" />
-        <option value="$PROJECT_DIR$/common-email/pom.xml" />
-        <option value="$PROJECT_DIR$/common-email/src/main/resources/email.properties" />
-        <option value="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/ftl/active.ftl" />
-        <option value="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/user.html" />
-        <option value="$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/ftl/user.ftl" />
-        <option value="$PROJECT_DIR$/common-email/src/main/resources/application-email.xml" />
-        <option value="$PROJECT_DIR$/common-email/src/main/java/com/sm/cn/email/EmailService.java" />
-        <option value="$PROJECT_DIR$/crm-web/src/main/resources/springmvc.xml" />
-        <option value="$PROJECT_DIR$/common-threadpool/src/main/resources/application-async.xml" />
-        <option value="$PROJECT_DIR$/common-getBean/src/main/resources/application-container.xml" />
-        <option value="$PROJECT_DIR$/common-threadpool/pom.xml" />
-        <option value="$PROJECT_DIR$/common-threadpool/src/main/java/com/sm/cn/async/AsyncManager.java" />
-        <option value="$PROJECT_DIR$/common-threadpool/src/main/java/com/sm/cn/async/AsynvFactory.java" />
-        <option value="$PROJECT_DIR$/common-getBean/pom.xml" />
-        <option value="$PROJECT_DIR$/common-asyncpool/src/main/resources/application-async.xml" />
-        <option value="$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsyncManager.java" />
-        <option value="$PROJECT_DIR$/crm-service/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/common-asyncpool/pom.xml" />
-        <option value="$PROJECT_DIR$/crm-web/pom.xml" />
-        <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysRoleService.java" />
-        <option value="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysUser.java" />
+        <option value="$PROJECT_DIR$/crm-upload/src/main/resources/application-upload.xml" />
+        <option value="$PROJECT_DIR$/crm-upload/pom.xml" />
+        <option value="$PROJECT_DIR$/crm-upload/src/main/java/com/sm/cn/JwtUtils/TokenService.java" />
+        <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/JwtTokenService/TokenService.java" />
+        <option value="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/http/AjaxResult.java" />
+        <option value="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/mytoken/TokenService.java" />
+        <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/Interceptor/LoginINterceptor.java" />
+        <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/JwtAuthorizationsException.java" />
         <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysUserService.java" />
-        <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysMenuService.java" />
-        <option value="$PROJECT_DIR$/crm-service/src/test/java/DEMOTest.java" />
-        <option value="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysMenu.java" />
-        <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/SysMenuController.java" />
-        <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysMenuServiceImpl.java" />
-        <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysUserRoleService.java" />
-        <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysUserRoleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/SysUserController.java" />
-        <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysUserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysRole.java" />
-        <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/SysRoleController.java" />
-        <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysRoleMenuService.java" />
-        <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysRoleMenuServiceImpl.java" />
-        <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysRoleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/common-getBean/src/main/java/com/sm/cn/spring/SpringUtils.java" />
-        <option value="$PROJECT_DIR$/crm-upload/src/main/resources/upload.properties" />
-        <option value="$PROJECT_DIR$/crm-upload/src/main/java/com/sm/cn/upload/FileUtils.java" />
         <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/UploadController.java" />
-        <option value="$PROJECT_DIR$/crm-upload/src/main/java/com/sm/cn/upload/UploadService.java" />
+        <option value="$PROJECT_DIR$/mybatis-plus-gen/src/main/java/CodeGen.java" />
+        <option value="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysLoginLogController.java" />
+        <option value="$PROJECT_DIR$/crm-mapper/src/main/java/com/sm/cn/mapper/SysLoginLogMapper.java" />
+        <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysLoginLogService.java" />
+        <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysLoginLogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysLoginLog.java" />
+        <option value="$PROJECT_DIR$/crm-entity/pom.xml" />
+        <option value="$PROJECT_DIR$/common-useragent/pom.xml" />
+        <option value="$PROJECT_DIR$/common-useragent/src/main/java/com/sm/cn/useragent/LoginLocalBean.java" />
+        <option value="$PROJECT_DIR$/common-useragent/src/main/java/com/sm/cn/useragent/LoginLocaltationBean.java" />
+        <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/crm-mapper/src/main/resources/db.properties" />
+        <option value="$PROJECT_DIR$/common-asyncpool/pom.xml" />
+        <option value="$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsyncManager.java" />
+        <option value="$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsynvFactory.java" />
+        <option value="$PROJECT_DIR$/crm-web/src/main/resources/springmvc.xml" />
+        <option value="$PROJECT_DIR$/crm-service/src/main/resources/application-service.xml" />
+        <option value="$PROJECT_DIR$/crm-web/pom.xml" />
+        <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/SysUserController.java" />
+        <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/LoginLogController.java" />
+        <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/CrmExceptionController.java" />
+        <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/JwtAuthorizationException.java" />
+        <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/GlobalExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/http/AjaxStatus.java" />
+        <option value="$PROJECT_DIR$/crm-service/pom.xml" />
+        <option value="$PROJECT_DIR$/common-useragent/src/main/java/com/sm/cn/useragent/ServletUtils.java" />
+        <option value="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysOperLog.java" />
+        <option value="$PROJECT_DIR$/crm-mapper/src/main/java/com/sm/cn/mapper/SysOperLogMapper.java" />
+        <option value="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/LoginUser.java" />
+        <option value="$PROJECT_DIR$/common-rediscache/src/main/java/com/sm/cn/redis/redisDemo.java" />
+        <option value="$PROJECT_DIR$/common-rediscache/src/test/java/com/sm/cn/redis/RedisCacheServiceTest.java" />
+        <option value="$PROJECT_DIR$/common-rediscache/src/main/resources/application-redisscan.xml" />
+        <option value="$PROJECT_DIR$/common-rediscache/src/test/java/com/sm/cn/redis/redisDemoTest.java" />
+        <option value="$PROJECT_DIR$/common-rediscache/pom.xml" />
+        <option value="$PROJECT_DIR$/common-rediscache/src/test/java/com/sm/cn/redis/RedisTest.java" />
+        <option value="$PROJECT_DIR$/common-rediscache/src/main/resources/application-redis.xml" />
+        <option value="$PROJECT_DIR$/common-rediscache/src/main/java/com/sm/cn/redis/JsonUtils.java" />
+        <option value="$PROJECT_DIR$/common-rediscache/src/main/java/com/sm/cn/redis/RedisCacheService.java" />
+        <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/Interceptor/LoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/mytoken/TokenService.java" />
       </list>
     </option>
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -319,12 +337,49 @@
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="crm-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="crm-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="crm-upload" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="crm-upload" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="crm-upload" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="com.sm.cn:crm-enetity:1.0-SNAPSHOT" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="crm-web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="crm-web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="crm-web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="com.sm.cn:crm-upload:1.0-SNAPSHOT" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="crm-web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="com.sm.cn:crm-upload:1.0-SNAPSHOT" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+          <item name="com.sm.cn:crm-enetity:1.0-SNAPSHOT" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
         </path>
       </expand>
       <select />
@@ -337,19 +392,18 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="300" />
-    <option name="y" value="163" />
+    <option name="x" value="64" />
+    <option name="y" value="30" />
     <option name="width" value="1940" />
-    <option name="height" value="901" />
+    <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <hideEmptyPackages ProjectPane="false" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -390,131 +444,30 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="common-asyncpool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="common-asyncpool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sm" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="common-asyncpool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sm" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
               <item name="async" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
               <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="common-getBean" type="462c0819:PsiDirectoryNode" />
+              <item name="crm-web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
               <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="common-getBean" type="462c0819:PsiDirectoryNode" />
+              <item name="crm-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
               <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="common-getBean" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="common-getBean" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="common-getBean" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="common-getBean" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="common-getBean" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sm" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="common-getBean" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sm" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-upload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-upload" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-upload" type="462c0819:PsiDirectoryNode" />
+              <item name="crm-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
               <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-upload" type="462c0819:PsiDirectoryNode" />
+              <item name="crm-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -522,49 +475,7 @@
             <path>
               <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
               <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-upload" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-upload" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-upload" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sm" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-upload" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sm" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-upload" type="462c0819:PsiDirectoryNode" />
+              <item name="crm-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -572,20 +483,10 @@
             <path>
               <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
               <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-upload" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
               <item name="crm-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
@@ -593,74 +494,42 @@
               <item name="crm-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
               <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-web" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-plus-gen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-plus-gen" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-plus-gen" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
               <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-web" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis-plus-gen" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sm" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sm" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
-              <item name="crm-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sm" type="462c0819:PsiDirectoryNode" />
-              <item name="cn" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -675,35 +544,43 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="GrepConsole" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.sm.cn.redis" />
       <recent name="com.sm.cn.email" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sm.cn.entity" />
+      <recent name="com.sm.cn.mapper" />
+      <recent name="com.sm.cn.mytoken" />
+      <recent name="com.sm.cn.upload" />
+      <recent name="com.sm.cn.service" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.sm.cn.upload" />
-      <recent name="com.sm.cn.service" />
-      <recent name="com.sm.cn.service.impl" />
-      <recent name="com.sm.cn.controller" />
-      <recent name="com.sm.cn.groupvalidator" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Maven-workspace\crm-root\common-rediscache\src\main\resources" />
       <recent name="E:\Maven-workspace\crm-root\common-asyncpool\src\main\java\com\sm\cn\async" />
       <recent name="E:\Maven-workspace\crm-root\common-asyncpool\src\main\resources" />
       <recent name="E:\Maven-workspace\crm-root\crm-web\src\main\webapp\WEB-INF\ftl" />
       <recent name="E:\Maven-workspace\crm-root\common-email\src\main\resources" />
-      <recent name="E:\Maven-workspace\crm-root\commons-email\src\main\resources" />
     </key>
   </component>
   <component name="RestServicesNavigator">
     <treeState>
       <expand>
         <path>
-          <item name="Found 44 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="Found 54 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 54 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="crm-web" type="c588b436:RestServiceStructure$ProjectNode" />
         </path>
       </expand>
       <select />
@@ -722,24 +599,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Unnamed">
-    <configuration name="PasswordTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sm.cn.DemoTest.PasswordTest" />
-      <module name="crm-web" />
+    <configuration name="TokenService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sm.cn.mytoken.TokenService" />
+      <module name="crm-service" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sm.cn.DemoTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="ThreadDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sm.cn.ScheduledExecutor.ThreadDemo" />
-      <module name="commons-email" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sm.cn.ScheduledExecutor.*" />
+          <option name="PATTERN" value="com.sm.cn.mytoken.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -747,13 +613,42 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="DEMOTest.a" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="crm-service" />
+    <configuration name="RedisTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="common-rediscache" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sm.cn.redis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DEMOTest" />
-      <option name="METHOD_NAME" value="a" />
+      <option name="PACKAGE_NAME" value="com.sm.cn.redis" />
+      <option name="MAIN_CLASS_NAME" value="com.sm.cn.redis.RedisTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="RedisTest.TSe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="common-rediscache" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sm.cn.redis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sm.cn.redis" />
+      <option name="MAIN_CLASS_NAME" value="com.sm.cn.redis.RedisTest" />
+      <option name="METHOD_NAME" value="TSe" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -764,42 +659,19 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="EmailServiceTest.sendMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="commons-email" />
+    <configuration name="RedisTest.sad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="common-rediscache" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sm.cn.email.*" />
+          <option name="PATTERN" value="com.sm.cn.redis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.sm.cn.email" />
-      <option name="MAIN_CLASS_NAME" value="com.sm.cn.email.EmailServiceTest" />
-      <option name="METHOD_NAME" value="sendMail" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="PasswordTest.a" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="crm-web" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sm.cn.DemoTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.sm.cn.DemoTest" />
-      <option name="MAIN_CLASS_NAME" value="com.sm.cn.DemoTest.PasswordTest" />
-      <option name="METHOD_NAME" value="a" />
+      <option name="PACKAGE_NAME" value="com.sm.cn.redis" />
+      <option name="MAIN_CLASS_NAME" value="com.sm.cn.redis.RedisTest" />
+      <option name="METHOD_NAME" value="sad" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -817,6 +689,29 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="redisDemoTest.asd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="common-rediscache" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sm.cn.redis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sm.cn.redis" />
+      <option name="MAIN_CLASS_NAME" value="com.sm.cn.redis.redisDemoTest" />
+      <option name="METHOD_NAME" value="asd" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -922,19 +817,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Unnamed" />
-      <item itemvalue="Application.PasswordTest" />
-      <item itemvalue="Application.ThreadDemo" />
-      <item itemvalue="JUnit.DEMOTest.a" />
-      <item itemvalue="JUnit.EmailServiceTest.sendMail" />
-      <item itemvalue="JUnit.PasswordTest.a" />
+      <item itemvalue="JUnit.RedisTest.sad" />
+      <item itemvalue="JUnit.RedisTest" />
+      <item itemvalue="JUnit.redisDemoTest.asd" />
+      <item itemvalue="JUnit.RedisTest.TSe" />
+      <item itemvalue="Application.TokenService" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DEMOTest.a" />
-        <item itemvalue="JUnit.PasswordTest.a" />
-        <item itemvalue="Application.PasswordTest" />
-        <item itemvalue="JUnit.EmailServiceTest.sendMail" />
-        <item itemvalue="Application.ThreadDemo" />
+        <item itemvalue="Application.TokenService" />
+        <item itemvalue="JUnit.RedisTest.TSe" />
+        <item itemvalue="JUnit.redisDemoTest.asd" />
+        <item itemvalue="JUnit.RedisTest" />
+        <item itemvalue="JUnit.RedisTest.sad" />
       </list>
     </recent_temporary>
   </component>
@@ -977,7 +872,20 @@
       <workItem from="1603378831486" duration="4078000" />
       <workItem from="1603451867760" duration="5674000" />
       <workItem from="1603458408661" duration="14067000" />
-      <workItem from="1603512248716" duration="24628000" />
+      <workItem from="1603512248716" duration="41575000" />
+      <workItem from="1603624591955" duration="10975000" />
+      <workItem from="1603636795316" duration="654000" />
+      <workItem from="1603676571847" duration="13603000" />
+      <workItem from="1603724091562" duration="14547000" />
+      <workItem from="1603850970975" duration="25758000" />
+      <workItem from="1603939767267" duration="598000" />
+      <workItem from="1603940529716" duration="14133000" />
+      <workItem from="1604137516403" duration="105000" />
+      <workItem from="1604138248876" duration="315000" />
+      <workItem from="1604205734894" duration="1879000" />
+      <workItem from="1604217833511" duration="599000" />
+      <workItem from="1604316881509" duration="1452000" />
+      <workItem from="1604368278810" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="集成测试">
       <created>1602923031148</created>
@@ -1046,81 +954,94 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EmailServiceTest_sendMail - 2020.10.23 at 19h 59m 37s.xml">
-      <configuration name="EmailServiceTest.sendMail" configurationId="JUnit" />
+    <history-entry file="RedisTest - 2020.10.29 at 19h 32m 07s.xml">
+      <configuration name="RedisTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmailServiceTest_sendMail - 2020.10.23 at 20h 01m 49s.xml">
-      <configuration name="EmailServiceTest.sendMail" configurationId="JUnit" />
+    <history-entry file="redisDemoTest_asd - 2020.10.29 at 19h 33m 05s.xml">
+      <configuration name="redisDemoTest.asd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PasswordTest_a - 2020.10.23 at 20h 45m 16s.xml">
-      <configuration name="PasswordTest.a" configurationId="JUnit" />
+    <history-entry file="redisDemoTest_asd - 2020.10.29 at 19h 33m 11s.xml">
+      <configuration name="redisDemoTest.asd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PasswordTest_a - 2020.10.23 at 20h 45m 52s.xml">
-      <configuration name="PasswordTest.a" configurationId="JUnit" />
+    <history-entry file="redisDemoTest_asd - 2020.10.29 at 19h 33m 50s.xml">
+      <configuration name="redisDemoTest.asd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PasswordTest_a - 2020.10.23 at 20h 46m 06s.xml">
-      <configuration name="PasswordTest.a" configurationId="JUnit" />
+    <history-entry file="redisDemoTest_asd - 2020.10.29 at 19h 34m 11s.xml">
+      <configuration name="redisDemoTest.asd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PasswordTest_a - 2020.10.23 at 20h 48m 05s.xml">
-      <configuration name="PasswordTest.a" configurationId="JUnit" />
+    <history-entry file="redisDemoTest_asd - 2020.10.29 at 19h 35m 29s.xml">
+      <configuration name="redisDemoTest.asd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PasswordTest_a - 2020.10.23 at 20h 48m 09s.xml">
-      <configuration name="PasswordTest.a" configurationId="JUnit" />
+    <history-entry file="redisDemoTest_asd - 2020.10.29 at 19h 35m 33s.xml">
+      <configuration name="redisDemoTest.asd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DEMOTest_a - 2020.10.24 at 15h 02m 49s.xml">
-      <configuration name="DEMOTest.a" configurationId="JUnit" />
+    <history-entry file="redisDemoTest_asd - 2020.10.29 at 19h 35m 43s.xml">
+      <configuration name="redisDemoTest.asd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DEMOTest_a - 2020.10.24 at 15h 03m 17s.xml">
-      <configuration name="DEMOTest.a" configurationId="JUnit" />
+    <history-entry file="redisDemoTest_asd - 2020.10.29 at 19h 37m 21s.xml">
+      <configuration name="redisDemoTest.asd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DEMOTest_a - 2020.10.24 at 15h 04m 36s.xml">
-      <configuration name="DEMOTest.a" configurationId="JUnit" />
+    <history-entry file="RedisTest_TSe - 2020.10.29 at 19h 44m 53s.xml">
+      <configuration name="RedisTest.TSe" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140137000" />
+    <option name="totallyTimeSpent" value="242301000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="300" y="163" width="1940" height="901" extended-state="0" />
+    <frame x="-56" y="197" width="1940" height="1088" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="RestServices" order="10" sideWeight="0.4994363" weight="0.06382979" />
-      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.10660981" side_tool="true" weight="0.85714287" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.22972973" />
-      <window_info anchor="right" id="Maven Projects" order="5" sideWeight="0.49818182" visible="true" weight="0.052659575" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="RestServices" order="10" sideWeight="0.4994363" weight="0.018743109" />
+      <window_info anchor="bottom" id="Event Log" order="18" sideWeight="0.10660981" side_tool="true" weight="0.85714287" />
+      <window_info anchor="bottom" id="Application Servers" order="8" weight="0.22972973" />
+      <window_info anchor="right" id="Maven Projects" order="5" sideWeight="0.49818182" weight="0.12446809" />
+      <window_info anchor="bottom" id="Database Changes" order="16" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Tail" />
+      <window_info anchor="bottom" id="Tail" order="19" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" sideWeight="0.19478738" side_tool="true" weight="0.13723405" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.27094242" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.29153606" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.3572395" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="right" id="Codota" order="11" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Java Enterprise" order="15" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.4989339" weight="0.08033241" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8933902" visible="true" weight="0.19028871" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8052126" visible="true" weight="0.20106383" />
-      <window_info anchor="right" id="Bean Validation" order="11" weight="0.02627346" />
+      <window_info anchor="bottom" id="Version Control" order="17" sideWeight="0.4989339" weight="0.08033241" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8933902" weight="0.17576565" />
+      <window_info anchor="bottom" id="Spring" order="11" />
+      <window_info anchor="bottom" id="CheckStyle" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6156969" visible="true" weight="0.21382979" />
+      <window_info anchor="bottom" id="Problems" order="0" />
+      <window_info anchor="right" id="Bean Validation" order="11" visible="true" weight="0.025" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
       <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5018182" side_tool="true" weight="0.12819149" />
+      <window_info anchor="bottom" id="JRebel Executor" order="9" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="right" id="JRebel Setup Guide" order="4" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="right" id="aiXcoder" order="4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" id="JRebel" order="2" sideWeight="0.38430312" side_tool="true" visible="true" weight="0.16914894" />
+      <window_info anchor="right" id="Word Book" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.03448276" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3291536" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="13" weight="0.32882273" />
+      <window_info anchor="right" id="Translation Assistant" order="4" weight="0.32978722" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="JRebel Console" order="10" side_tool="true" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="right" id="RestServices" order="10" sideWeight="0.4994363" visible="true" weight="0.07978723" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.22972973" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -1143,14 +1064,13 @@
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.4989339" weight="0.0" />
       <window_info anchor="right" id="Maven Projects" order="5" sideWeight="0.49818182" weight="0.0032171581" />
-      <window_info id="Structure" order="1" sideWeight="0.19478738" side_tool="true" visible="true" weight="0.13723405" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8052126" visible="true" weight="0.13723405" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="RestServices" order="10" sideWeight="0.4994363" visible="true" weight="0.07978723" />
+      <window_info id="Structure" order="1" sideWeight="0.19478738" side_tool="true" visible="true" weight="0.13723405" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5018182" side_tool="true" weight="0.12819149" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
@@ -1202,338 +1122,289 @@
     <MESSAGE value="邮件发送" />
     <MESSAGE value="手写 异步任务调度" />
     <MESSAGE value="新增    给用户分配权限    给角色赋予权限    前后端交互良好 正常运行" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增    给用户分配权限    给角色赋予权限    前后端交互良好 正常运行" />
+    <MESSAGE value="目录打散，优化异步任务调度" />
+    <option name="LAST_COMMIT_MESSAGE" value="目录打散，优化异步任务调度" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mybatis-plus-gen/src/main/java/CodeGen.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="35" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="byUserName" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common-valicator/pom.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/auth0/java-jwt/3.11.0/java-jwt-3.11.0.jar!/com/auth0/jwt/exceptions/JWTVerificationException.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        <state relative-caret-position="108">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/http/AjaxResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/http/AjaxStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm-service/crm-service.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-useragent/src/main/java/com/sm/cn/useragent/ServletUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sm/cn/entity/SysOperLog.java" />
+    <entry file="file://$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysOperLog.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sm/cn/mapper/SysOperLogMapper.java" />
+    <entry file="file://$PROJECT_DIR$/crm-mapper/src/main/java/com/sm/cn/mapper/SysMenuMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm-mapper/src/main/java/com/sm/cn/mapper/SysOperLogMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="67" selection-start-line="5" selection-start-column="67" selection-end-line="5" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysLoginLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-904">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/LoginLogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.3.4.RELEASE/spring-data-redis-2.3.4.RELEASE.jar!/org/springframework/data/redis/core/StringRedisTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/ftl/active.ftl" />
-    <entry file="file://$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/user.html" />
-    <entry file="file://$PROJECT_DIR$/crm-web/src/main/webapp/WEB-INF/ftl/user.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.9.RELEASE/spring-context-5.2.9.RELEASE.jar!/org/springframework/context/annotation/PropertySource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-email/src/main/resources/email.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-email/src/main/resources/application-email.xml">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="7" column="96" selection-start-line="7" selection-start-column="96" selection-end-line="7" selection-end-column="96" />
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-email/pom.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.13/junit-4.13.jar!/org/junit/runner/notification/Failure.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        <state relative-caret-position="165">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crm-web/src/main/resources/springmvc.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.13/junit-4.13.jar!/org/junit/runner/notification/RunNotifier.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
+        <state relative-caret-position="111">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-threadpool/src/main/resources/application-async.xml" />
-    <entry file="file://$PROJECT_DIR$/common-email/src/main/java/com/sm/cn/email/EmailService.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.13/junit-4.13.jar!/org/junit/internal/runners/model/EachTestNotifier.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        <state relative-caret-position="111">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-getBean/src/main/resources/application-container.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.13/junit-4.13.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+        <state relative-caret-position="142">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-threadpool/src/main/java/com/sm/cn/async/AsynvFactory.java" />
-    <entry file="file://$PROJECT_DIR$/common-threadpool/src/main/java/com/sm/cn/async/AsyncManager.java" />
-    <entry file="file://$PROJECT_DIR$/common-getBean/pom.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.13/junit-4.13.jar!/org/junit/runner/JUnitCore.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        <state relative-caret-position="111">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-threadpool/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/resources/application-async.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.13/junit-4.13.jar!/org/junit/runners/ParentRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="111">
+          <caret line="282" selection-start-line="282" selection-end-line="282" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.13/junit-4.13.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-rediscache/src/test/java/com/sm/cn/redis/redisDemoTest.java" />
+    <entry file="file://$PROJECT_DIR$/common-useragent/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-567" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-rediscache/src/main/java/com/sm/cn/redis/redisDemo.java" />
+    <entry file="file://$PROJECT_DIR$/common-rediscache/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-rediscache/src/main/resources/application-redisscan.xml" />
+    <entry file="file://$PROJECT_DIR$/common-rediscache/src/main/resources/redis.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-rediscache/src/main/resources/application-redis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-rediscache/src/test/java/com/sm/cn/redis/RedisTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crm-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="268">
+          <caret line="109" column="37" selection-start-line="109" selection-start-column="37" selection-end-line="109" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/common-rediscache/src/main/java/com/sm/cn/redis/JsonUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        <state relative-caret-position="972">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-asyncpool/pom.xml">
+    <entry file="file://$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/LoginUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        <state relative-caret-position="567">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crm-web/pom.xml">
+    <entry file="file://$PROJECT_DIR$/common-rediscache/src/main/java/com/sm/cn/redis/RedisCacheService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="112">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/BaseUnitController.java">
+    <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/JwtAuthorizationException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        <state relative-caret-position="459">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/BaseCategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="31" selection-start-line="31" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2349">
-          <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-service/src/test/java/DEMOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="41" column="54" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="80" column="24" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysMenuServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
-          <folding>
-            <element signature="e#748#749#0" expanded="true" />
-            <element signature="e#775#776#0" expanded="true" />
-            <element signature="e#934#935#0" expanded="true" />
-            <element signature="e#961#962#0" expanded="true" />
-            <element signature="e#1058#1059#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1185#1186#0" expanded="true" />
-            <element signature="e#1269#1270#0" expanded="true" />
-            <element signature="e#1295#1296#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/SysMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysMenuService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysUserRoleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="102" column="48" lean-forward="true" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="64" />
-          <folding>
-            <element signature="e#860#861#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
-            <element signature="e#1081#1082#0" expanded="true" />
-            <element signature="e#1448#1449#0" expanded="true" />
-            <element signature="e#1477#1478#0" expanded="true" />
-            <element signature="e#1569#1570#0" expanded="true" />
-            <element signature="e#1604#1605#0" expanded="true" />
-            <element signature="e#1686#1687#0" expanded="true" />
-            <element signature="e#1711#1712#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysUserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="e#1834#1835#0" expanded="true" />
-            <element signature="e#1881#1882#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysUserRoleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysRoleService.java">
+    <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/CrmExceptionController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/SysRoleController.java">
+    <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/GlobalExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        <state relative-caret-position="378">
+          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysRole.java">
+    <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/Interceptor/LoginInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+        <state relative-caret-position="702">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysRoleMenuService.java">
+    <entry file="file://$PROJECT_DIR$/crm-service/src/main/resources/application-service.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        <state relative-caret-position="567">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysRoleMenuServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="83" column="47" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
-          <folding>
-            <element signature="e#947#948#0" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1764#1765#0" expanded="true" />
-            <element signature="e#1813#1814#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1890">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysRoleServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/mytoken/TokenService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
+        <state relative-caret-position="3024">
+          <caret line="150" column="20" selection-start-line="150" selection-start-column="20" selection-end-line="150" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/SysUserController.java">
+    <entry file="file://$PROJECT_DIR$/crm-mapper/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="91" column="39" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="27">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="92" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsynvFactory.java">
+    <entry file="file://$PROJECT_DIR$/mybatis-plus-gen/src/main/java/CodeGen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="20" selection-end-column="24" />
+        <state relative-caret-position="837">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsyncManager.java">
+    <entry file="file://$PROJECT_DIR$/common-email/src/main/resources/email.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
-            <element signature="e#793#794#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common-getBean/src/main/java/com/sm/cn/spring/SpringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-upload/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        <state relative-caret-position="162">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -1542,45 +1413,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crm-upload/src/main/resources/upload.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" selection-start-line="1" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/CrmExceptionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-upload/src/main/java/com/sm/cn/upload/UploadService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
-          <caret line="73" column="42" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
-          <folding>
-            <element signature="e#879#892#1" expanded="true" />
-            <element signature="e#926#942#1" expanded="true" />
-            <element signature="e#983#1003#1" expanded="true" />
-            <element signature="e#1047#1062#1" expanded="true" />
-            <element signature="e#1102#1114#1" expanded="true" />
-            <element signature="e#1149#1157#1" expanded="true" />
-            <element signature="e#1186#1198#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/UploadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="54">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crm-upload/src/main/java/com/sm/cn/upload/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        <state relative-caret-position="54">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm-upload/src/main/java/com/sm/cn/upload/UploadService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crm-web/src/main/resources/springmvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-getBean/src/main/java/com/sm/cn/spring/SpringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="17" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsyncManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding>
+            <element signature="e#757#758#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsynvFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="35" column="91" selection-start-line="35" selection-start-column="91" selection-end-line="35" selection-end-column="91" />
         </state>
       </provider>
     </entry>
@@ -1663,11 +1546,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.alibaba:druid:1.1.10</last-edited>
+          <last-edited>Maven: commons-codec:commons-codec:1.14</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.3133236" />
               </list>
             </option>
           </splitter-proportions>
