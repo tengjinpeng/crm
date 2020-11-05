@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="87b53f8a-5d48-4af2-8c76-9fd1f54b3f77" name="Default" comment="目录打散，优化异步任务调度">
+    <list default="true" readonly="true" id="87b53f8a-5d48-4af2-8c76-9fd1f54b3f77" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/common-asyncpool" afterDir="true" />
       <change afterPath="$PROJECT_DIR$/common-asyncpool/src" afterDir="true" />
       <change afterPath="$PROJECT_DIR$/common-asyncpool/src/main" afterDir="true" />
@@ -16,56 +16,8 @@
       <change afterPath="$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn" afterDir="true" />
       <change afterPath="$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async" afterDir="true" />
       <change afterPath="$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsyncManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/LoginUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysLoginLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/entity/SysOperLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-mapper/src/main/java/com/sm/cn/mapper/SysLoginLogMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-mapper/src/main/java/com/sm/cn/mapper/SysOperLogMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/mytoken/TokenService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysLoginLogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysLoginLogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/Interceptor/LoginInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/LoginLogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/JwtAuthorizationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsynvFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-entity/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-entity/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/http/AjaxStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/http/AjaxStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-entity/target/classes/com/sm/cn/http/AjaxStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-entity/target/classes/com/sm/cn/http/AjaxStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-mapper/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/crm-mapper/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-mapper/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/crm-mapper/target/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/ISysUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-service/src/main/resources/application-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-service/src/main/resources/application-service.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-service/target/classes/application-service.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-service/target/classes/application-service.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-service/target/classes/com/sm/cn/service/ISysUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-service/target/classes/com/sm/cn/service/ISysUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-service/target/classes/com/sm/cn/service/impl/SysUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-service/target/classes/com/sm/cn/service/impl/SysUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/SysUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/CrmExceptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/exception/CrmExceptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/src/main/resources/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/classes/com/sm/cn/controller/SysUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/classes/com/sm/cn/controller/SysUserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/classes/com/sm/cn/controller/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/classes/com/sm/cn/controller/UploadController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/classes/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/classes/com/sm/cn/controller/SysUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/classes/com/sm/cn/controller/SysUserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/classes/com/sm/cn/controller/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/classes/com/sm/cn/controller/UploadController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/classes/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-asyncpool-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-asyncpool-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-cors-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-cors-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-email-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-email-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-getBean-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-getBean-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-valicator-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/common-valicator-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-enetity-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-enetity-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-mapper-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-mapper-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-upload-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/crm-web/target/crm-web-1.0-SNAPSHOT/WEB-INF/lib/crm-upload-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis-plus-gen/src/main/java/CodeGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis-plus-gen/src/main/java/CodeGen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -102,24 +54,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CodeGen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mybatis-plus-gen/src/main/java/CodeGen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="837">
-              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="email.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common-email/src/main/resources/email.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FileUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crm-upload/src/main/java/com/sm/cn/upload/FileUtils.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -153,17 +87,22 @@
       <file leaf-file-name="SpringUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common-getBean/src/main/java/com/sm/cn/spring/SpringUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="17" selection-end-column="52" />
+            <state relative-caret-position="459">
+              <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AsynvFactory.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application-container.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common-getBean/src/main/resources/application-container.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="AsynvFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsynvFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="35" column="91" selection-start-line="35" selection-start-column="91" selection-end-line="35" selection-end-column="91" />
+            <state relative-caret-position="737">
+              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -171,8 +110,8 @@
       <file leaf-file-name="AsyncManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsyncManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+            <state relative-caret-position="162">
+              <caret line="18" column="81" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
               <folding>
                 <element signature="e#757#758#0" expanded="true" />
                 <element signature="e#820#821#0" expanded="true" />
@@ -181,9 +120,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application-upload.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crm-upload/src/main/resources/application-upload.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="application-async.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/resources/application-async.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScheduledThreadPoolExecutor.java" pinned="false" current-in-tab="false">
+        <entry file="jar://E:/Jdk/src.zip!/java/util/concurrent/ScheduledThreadPoolExecutor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="120" column="13" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="upload.properties" pinned="false" current-in-tab="false">
@@ -253,7 +205,6 @@
         <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/service/impl/SysUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/crm-mapper/src/main/resources/db.properties" />
         <option value="$PROJECT_DIR$/common-asyncpool/pom.xml" />
-        <option value="$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsyncManager.java" />
         <option value="$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsynvFactory.java" />
         <option value="$PROJECT_DIR$/crm-web/src/main/resources/springmvc.xml" />
         <option value="$PROJECT_DIR$/crm-service/src/main/resources/application-service.xml" />
@@ -281,6 +232,7 @@
         <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/Interceptor/LoginInterceptor.java" />
         <option value="$PROJECT_DIR$/crm-web/src/main/java/com/sm/cn/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/crm-service/src/main/java/com/sm/cn/mytoken/TokenService.java" />
+        <option value="$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsyncManager.java" />
       </list>
     </option>
   </component>
@@ -392,10 +344,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
-    <option name="y" value="30" />
+    <option name="x" value="-29" />
+    <option name="y" value="629" />
     <option name="width" value="1940" />
-    <option name="height" value="1088" />
+    <option name="height" value="1024" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -443,8 +395,41 @@
               <item name="common-asyncpool" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
+              <item name="common-getBean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
+              <item name="common-getBean" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
+              <item name="common-getBean" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
+              <item name="common-getBean" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="async" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crm-root" type="462c0819:PsiDirectoryNode" />
+              <item name="common-getBean" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="crm-root" type="b2602c69:ProjectViewProjectNode" />
@@ -885,7 +870,7 @@
       <workItem from="1604205734894" duration="1879000" />
       <workItem from="1604217833511" duration="599000" />
       <workItem from="1604316881509" duration="1452000" />
-      <workItem from="1604368278810" duration="599000" />
+      <workItem from="1604368278810" duration="2250000" />
     </task>
     <task id="LOCAL-00001" summary="集成测试">
       <created>1602923031148</created>
@@ -986,11 +971,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242301000" />
+    <option name="totallyTimeSpent" value="243952000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-56" y="197" width="1940" height="1088" extended-state="1" />
-    <editor active="true" />
+    <frame x="-29" y="629" width="1940" height="1024" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="RestServices" order="10" sideWeight="0.4994363" weight="0.018743109" />
@@ -1123,7 +1107,8 @@
     <MESSAGE value="手写 异步任务调度" />
     <MESSAGE value="新增    给用户分配权限    给角色赋予权限    前后端交互良好 正常运行" />
     <MESSAGE value="目录打散，优化异步任务调度" />
-    <option name="LAST_COMMIT_MESSAGE" value="目录打散，优化异步任务调度" />
+    <MESSAGE value="JWT和登录日志完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="JWT和登录日志完善" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1147,27 +1132,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/auth0/java-jwt/3.11.0/java-jwt-3.11.0.jar!/com/auth0/jwt/exceptions/JWTVerificationException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/http/AjaxResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crm-entity/src/main/java/com/sm/cn/http/AjaxStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crm-service/crm-service.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1356,6 +1320,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+          <folding>
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1384,6 +1352,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3024">
           <caret line="150" column="20" selection-start-line="150" selection-start-column="20" selection-end-line="150" selection-end-column="20" />
+          <folding>
+            <element signature="method#createToken#0;class#TokenService#0" />
+            <element signature="method#verifierToken#0;class#TokenService#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1442,17 +1414,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/common-getBean/src/main/resources/application-container.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/common-getBean/src/main/java/com/sm/cn/spring/SpringUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="17" selection-end-column="52" />
+        <state relative-caret-position="459">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsynvFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Jdk/src.zip!/java/util/concurrent/ScheduledThreadPoolExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="120" column="13" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsyncManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+        <state relative-caret-position="162">
+          <caret line="18" column="81" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
           <folding>
             <element signature="e#757#758#0" expanded="true" />
             <element signature="e#820#821#0" expanded="true" />
@@ -1460,10 +1449,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/java/com/sm/cn/async/AsynvFactory.java">
+    <entry file="file://$PROJECT_DIR$/common-asyncpool/src/main/resources/application-async.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="35" column="91" selection-start-line="35" selection-start-column="91" selection-end-line="35" selection-end-column="91" />
+        <state relative-caret-position="189">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
